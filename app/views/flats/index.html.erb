@@ -1,0 +1,21 @@
+<h2> All our Flats (<%= @flats.count %>)</h2>
+<h3></h3>
+<div class="">
+<% @flats.each do |f| %>
+<div  class="card" style="width: 18rem;">
+<img src="..." class="card-img-top" alt="...">
+<div  class="card-body">
+<div class="card-title"> <%= f.name %> </div>
+<%= f.address %>
+<%= f.description %>
+
+<i class="material-icons">attach_money</i><%= f.price_per_night %>
+<i class="material-icons">people</i><%= f.number_of_guests %>
+<%= f.rating %>
+</div>
+<%= link_to 'More info', flats_path %>
+</div>
+<% end %>
+
+
+</div>

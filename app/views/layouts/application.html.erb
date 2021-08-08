@@ -7,9 +7,20 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   </head>
 
   <body>
-    <%= yield %>
+  <div class="container">
+    <div class="navbar navbar-light bg-secondary justify-content-normal">
+      <span>RailsSimpleAirbnb</span>>
+      <%= link_to 'Home', flats_path, class: "btn btn-secondary" %>
+      <%= link_to 'Flats', flats_path, class: "btn btn-secondary" %>
+      <%= link_to 'Add flat', flats_path, class: "btn tertiary" %>
+    </div>
+    <div classs="row">
+     <%= yield %>
+    </div>
   </body>
 </html>
