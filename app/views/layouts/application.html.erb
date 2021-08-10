@@ -13,11 +13,11 @@
 
   <body>
   <div class="container">
-    <div class="navbar navbar-light bg-secondary justify-content-normal">
+    <div class="navbar navbar-light bg-secondary justify-content-left">
       <span>RailsSimpleAirbnb</span>>
       <%= link_to 'Home', flats_path, class: "btn btn-secondary" %>
       <%= link_to 'Flats', flats_path, class: "btn btn-secondary" %>
-      <%= link_to 'Add flat', flats_path, class: "btn tertiary" %>
+      <%= link_to 'Add flat', new_flat_path, class: "btn tertiary" %>
     </div>
     <div classs="row">
      <%= yield %>

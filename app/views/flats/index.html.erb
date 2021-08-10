@@ -1,21 +1,47 @@
-<h2> All our Flats (<%= @flats.count %>)</h2>
-<h3></h3>
-<div class="">
-<% @flats.each do |f| %>
-<div  class="card" style="width: 18rem;">
-<img src="..." class="card-img-top" alt="...">
-<div  class="card-body">
-<div class="card-title"> <%= f.name %> </div>
-<%= f.address %>
-<%= f.description %>
 
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+<h2> All our Flats (<%= @flats.count %>)</h2>
+    </div>
+  </div>
+
+<h3></h3>
+<div class="row">
+<% @flats.each do |f| %>
+      <div class="col-4">
+        <div class="flat-card">
+<img src="..." class="card-img-top" alt="...">
+         <div class="flat-card-content">
+            <div class="flat-card-title">
+ <%= f.name %> 
+             </div>
+<%= f.address %>
+
+            <div class="flex">
+              <div class="flex">
 <i class="material-icons">attach_money</i><%= f.price_per_night %>
+
+              </div>
+              <div class="flex ml-3">
 <i class="material-icons">people</i><%= f.number_of_guests %>
+
+              </div>
+            </div>
+          </div>
+          <div class="flat-card-actions">
 <%= f.rating %>
-</div>
-<%= link_to 'More info', flats_path %>
-</div>
+
+<%= link_to 'More info', flat_path(f) %>
+<%= link_to 'Edit', edit_flat_path(f) %>
+<%= link_to 'Remove', flat_path(f), method: :delete  %>
+
+          </div>
+        </div>
+      </div>
 <% end %>
 
+  </div>
 
 </div>

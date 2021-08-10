@@ -1,0 +1,26 @@
+<div  class="card" >
+<h2> <%=  @flat.name %> </h2>
+<p> <%=  @flat.address %> </p></div>
+<div  class="card" > <h2> Acerca de este hospedaje...</h2>
+<%=  "⭐"*@flat.rating.to_i %> 
+<%=  @flat.description %> </div>
+<div  class="card" >
+<h2> Detalles</h2>
+<i class="material-icons">attach_money</i><%= @flat.price_per_night %>
+<i class="material-icons">people</i><%= @flat.number_of_guests %></div>
+</div>
+
+
+     
+    <div>
+<%= link_to "Edit this flat", edit_flat_path(@flat), class: "btn btn-primary" %>
+<%= link_to "Back to all flats", flats_path, class: "btn btn-primary" %> 
+<%= link_to "Remove", flat_path(@flat), method: :delete, data: { confirm: "Esta seguro?" } %>
+
+</div>
+
+<div>
+</div>
+
+<div>
+</div>
